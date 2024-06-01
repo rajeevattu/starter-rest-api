@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" modified="2024-06-01T06:07:10.190Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="Cl_pcLE0v89zVxkX7c3Z" version="24.0.7" type="github">
+  <diagram name="AWS Integration Architecture" id="0">
+    <mxGraphModel dx="1189" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ATM" value="ATM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF99;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="40" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ATMNetwork" value="ATM Network" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="40" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="APIGateway" value="API Gateway" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCC99;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="410" y="50" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AuthenticationService" value="Authentication Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99FF99;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="270" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CRUDLambdaFunctions" value="CRUD Lambda Functions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF99CC;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="50" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CoreBankingSystemCreate" value="Core Banking System (Create)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9999;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="740" y="220" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CoreBankingSystemRead" value="Core Banking System (Read)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9999;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="740" y="320" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CoreBankingSystemUpdate" value="Core Banking System (Update)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9999;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="740" y="420" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Database" value="Database" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#9999FF;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="320" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MonitoringAndLogging" value="Monitoring &amp; Logging" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ATMToATMNetwork" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="ATMNetwork" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="70" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="200" y="70" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATMNetworkToAPIGateway" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="ATMNetwork" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="404" y="72" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lcb2Ic_fIhWbAjNw4mOB-1" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ATMNetworkToAPIGateway">
+          <mxGeometry x="-0.4408" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lcb2Ic_fIhWbAjNw4mOB-2" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ATMNetworkToAPIGateway">
+          <mxGeometry x="0.1544" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="APIGatewayToAuthenticationService" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;entryX=0.603;entryY=-0.087;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="AuthenticationService" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="110" as="sourcePoint" />
+            <mxPoint x="430" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="160" />
+              <mxPoint x="350" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="APIGatewayToCRUDLambdaFunctions" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;exitX=0.5;exitY=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="CRUDLambdaFunctions" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="80" as="sourcePoint" />
+            <mxPoint x="660" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CRUDLambdaFunctionsToCoreBankingSystemCreate" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="CRUDLambdaFunctions" target="CoreBankingSystemCreate" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CRUDLambdaFunctionsToCoreBankingSystemRead" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="CRUDLambdaFunctions" target="CoreBankingSystemRead" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CRUDLambdaFunctionsToCoreBankingSystemUpdate" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="110" as="sourcePoint" />
+            <mxPoint x="820" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CoreBankingSystemCreateToDatabase" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="CoreBankingSystemCreate" target="Database" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CoreBankingSystemReadToDatabase" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="CoreBankingSystemRead" target="Database" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CoreBankingSystemUpdateToDatabase" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="CoreBankingSystemUpdate" target="Database" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DatabaseToMonitoringAndLogging" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonal=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="Database" target="MonitoringAndLogging" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
