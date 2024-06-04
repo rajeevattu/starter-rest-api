@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-04T05:31:55.582Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="zi09bERGBcjYShuNHuFC" version="24.4.13" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2024-06-04T06:14:51.671Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="0odevUHrxlJZdp0CCRGw" version="24.4.13" type="github" pages="12">
   <diagram name="Page-1" id="pkMcTUoPThLEwvBGbGpj">
-    <mxGraphModel dx="2391" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -643,7 +643,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1Mmv5fQwZLDVK3vlfPJ2" name="Trans-InteractionFlow">
+  <diagram id="1Mmv5fQwZLDVK3vlfPJ2" name="TransactionFlow">
     <mxGraphModel dx="1222" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -1616,6 +1616,94 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1146" y="543" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="8tjgkdVPUEnN-NvdBd4Q" name="Face Recognition">
+    <mxGraphModel dx="1222" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--1" value="Camera" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="150" height="576" as="geometry" />
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--2" value="&quot;Kinesis Video Streams&quot;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="220" y="20" width="186" height="576" as="geometry" />
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--3" value="Lambda" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="456" y="20" width="150" height="576" as="geometry" />
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--4" value="Rekognition" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="656" y="20" width="150" height="576" as="geometry" />
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--5" value="DynamoDB" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="856" y="20" width="150" height="576" as="geometry" />
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--6" value="SNS" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="1056" y="20" width="150" height="576" as="geometry" />
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--7" value="&quot;Security Personnel&quot;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="1256" y="20" width="162" height="576" as="geometry" />
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--8" value="&quot;Security Hub&quot;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="1468" y="20" width="150" height="576" as="geometry" />
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--9" value="Stream video" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="sBl4lHYNqg-Ym84dNLy--1" target="sBl4lHYNqg-Ym84dNLy--2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="213" y="127" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--10" value="Forward video" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="sBl4lHYNqg-Ym84dNLy--2" target="sBl4lHYNqg-Ym84dNLy--3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="431" y="179" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--11" value="Analyze faces" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="sBl4lHYNqg-Ym84dNLy--3" target="sBl4lHYNqg-Ym84dNLy--4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="231" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--12" value="Query database" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="sBl4lHYNqg-Ym84dNLy--4" target="sBl4lHYNqg-Ym84dNLy--5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="283" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--13" value="Send results" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="sBl4lHYNqg-Ym84dNLy--4" target="sBl4lHYNqg-Ym84dNLy--3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="643" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--14" value="Send alert" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="sBl4lHYNqg-Ym84dNLy--3" target="sBl4lHYNqg-Ym84dNLy--6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="387" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--15" value="Notify" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="sBl4lHYNqg-Ym84dNLy--6" target="sBl4lHYNqg-Ym84dNLy--7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1243" y="439" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sBl4lHYNqg-Ym84dNLy--16" value="Log incident" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="sBl4lHYNqg-Ym84dNLy--3" target="sBl4lHYNqg-Ym84dNLy--8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1046" y="491" />
             </Array>
           </mxGeometry>
         </mxCell>
