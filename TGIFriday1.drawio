@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-04T08:43:01.355Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="_9nIiwJWOzYwPCcnV-Rr" version="24.4.13" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2024-06-04T17:43:30.529Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="YAS93c7yeGPg_XWV8P9m" version="24.4.13" type="github" pages="8">
   <diagram name="BANK Ref-Architecture" id="-D1157T1DTG9kwEiHS_4">
     <mxGraphModel dx="2391" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -912,6 +912,17 @@
       </root>
     </mxGraphModel>
   </diagram>
+  <diagram id="RdKU61krvyh-WgGPuTs2" name="EventDataFlow">
+    <mxGraphModel dx="1222" dy="1736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="C5Hav1Wr_GXYT0nMU0uX-1" value="&lt;h3 style=&quot;font-size: 18px;&quot;&gt;Event-Driven Design Overview&lt;/h3&gt;&lt;ol style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Alerting&lt;/strong&gt;: Implementing real-time alerts for critical events such as ATM tampering, low cash levels, or suspicious transactions.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Data Warehousing&lt;/strong&gt;: Storing transactional data in a data warehouse for analytics and reporting purposes.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Data Analytics Feed&lt;/strong&gt;: Providing a continuous feed of data to analytics tools for real-time insights and decision-making.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Kafka Use Case&lt;/strong&gt;: Utilizing Apache Kafka for event streaming and real-time data processing between ATMs and the core banking system.&lt;/li&gt;&lt;/ol&gt;&lt;h3 style=&quot;font-size: 18px;&quot;&gt;Event-Driven Design Components&lt;/h3&gt;&lt;h4 style=&quot;font-size: 18px;&quot;&gt;1. Alerting&lt;/h4&gt;&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Example&lt;/strong&gt;: Sending an alert to bank staff when an ATM detects tampering.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Event&lt;/strong&gt;: &quot;TamperingDetected&quot;&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Action&lt;/strong&gt;: Trigger a notification to security personnel via email or SMS.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Implementation&lt;/strong&gt;: AWS Lambda function subscribed to the &quot;TamperingDetected&quot; event published by ATMs. Upon detection, Lambda sends notifications using Amazon SNS.&lt;/li&gt;&lt;/ul&gt;&lt;h4 style=&quot;font-size: 18px;&quot;&gt;2. Data Warehousing&lt;/h4&gt;&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Example&lt;/strong&gt;: Storing transaction data for analytics and compliance.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Event&lt;/strong&gt;: &quot;TransactionCompleted&quot;&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Action&lt;/strong&gt;: Store transaction details in Amazon Redshift data warehouse.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Implementation&lt;/strong&gt;: AWS Lambda function subscribed to the &quot;TransactionCompleted&quot; event. Upon receipt, Lambda inserts data into Redshift using AWS Glue or AWS Data Pipeline.&lt;/li&gt;&lt;/ul&gt;&lt;h4 style=&quot;font-size: 18px;&quot;&gt;3. Data Analytics Feed&lt;/h4&gt;&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Example&lt;/strong&gt;: Providing real-time data feed to analytics tools for fraud detection.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Event&lt;/strong&gt;: &quot;TransactionInitiated&quot;&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Action&lt;/strong&gt;: Stream transaction data to Amazon Kinesis Data Streams for real-time processing.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Implementation&lt;/strong&gt;: ATMs publish &quot;TransactionInitiated&quot; events to Kinesis Data Streams. Analytics applications consume these events for fraud detection and analysis.&lt;/li&gt;&lt;/ul&gt;&lt;h4 style=&quot;font-size: 18px;&quot;&gt;4. Kafka Use Case&lt;/h4&gt;&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Example&lt;/strong&gt;: Implementing a Kafka pipeline for event streaming between ATMs and the core banking system.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Events&lt;/strong&gt;: Various events such as &quot;CashRefillRequested&quot;, &quot;PinValidationFailed&quot;, &quot;WithdrawalCompleted&quot;, etc.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Action&lt;/strong&gt;: Streaming events from ATMs to Kafka topics for real-time processing by backend systems.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Implementation&lt;/strong&gt;: ATMs produce events to Kafka topics using Kafka Producer API. Core banking systems consume these events using Kafka Consumer API for processing.&lt;/li&gt;&lt;/ul&gt;&lt;h3 style=&quot;font-size: 18px;&quot;&gt;Events Generated at ATM Sent to Core Banking&lt;/h3&gt;&lt;ol style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;TransactionInitiated&lt;/strong&gt;: When a customer initiates a transaction at the ATM.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;CashRefillRequested&lt;/strong&gt;: When cash refill is required due to low cash levels.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;TamperingDetected&lt;/strong&gt;: When tampering or unauthorized access is detected.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;PinValidationFailed&lt;/strong&gt;: When a customer enters an incorrect PIN during transaction initiation.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;WithdrawalCompleted&lt;/strong&gt;: When a cash withdrawal transaction is successfully completed.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;BalanceInquiryCompleted&lt;/strong&gt;: When a balance inquiry transaction is successfully completed.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;TransferInitiated&lt;/strong&gt;: When a customer initiates a fund transfer transaction.&lt;/li&gt;&lt;/ol&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="10" y="-780" width="560" height="930" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
   <diagram id="uCx4v6h1a9wkEjsysqWx" name="CloudArch">
     <mxGraphModel dx="2072" dy="1736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1324,13 +1335,178 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="RdKU61krvyh-WgGPuTs2" name="Page-7">
-    <mxGraphModel dx="1222" dy="1736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+  <diagram id="Ur6Gfw4VnIxEMaQ-qAcX" name="IntrusionFaceDetection ">
+    <mxGraphModel dx="1222" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="C5Hav1Wr_GXYT0nMU0uX-1" value="&lt;h3 style=&quot;font-size: 18px;&quot;&gt;Event-Driven Design Overview&lt;/h3&gt;&lt;ol style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Alerting&lt;/strong&gt;: Implementing real-time alerts for critical events such as ATM tampering, low cash levels, or suspicious transactions.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Data Warehousing&lt;/strong&gt;: Storing transactional data in a data warehouse for analytics and reporting purposes.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Data Analytics Feed&lt;/strong&gt;: Providing a continuous feed of data to analytics tools for real-time insights and decision-making.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Kafka Use Case&lt;/strong&gt;: Utilizing Apache Kafka for event streaming and real-time data processing between ATMs and the core banking system.&lt;/li&gt;&lt;/ol&gt;&lt;h3 style=&quot;font-size: 18px;&quot;&gt;Event-Driven Design Components&lt;/h3&gt;&lt;h4 style=&quot;font-size: 18px;&quot;&gt;1. Alerting&lt;/h4&gt;&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Example&lt;/strong&gt;: Sending an alert to bank staff when an ATM detects tampering.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Event&lt;/strong&gt;: &quot;TamperingDetected&quot;&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Action&lt;/strong&gt;: Trigger a notification to security personnel via email or SMS.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Implementation&lt;/strong&gt;: AWS Lambda function subscribed to the &quot;TamperingDetected&quot; event published by ATMs. Upon detection, Lambda sends notifications using Amazon SNS.&lt;/li&gt;&lt;/ul&gt;&lt;h4 style=&quot;font-size: 18px;&quot;&gt;2. Data Warehousing&lt;/h4&gt;&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Example&lt;/strong&gt;: Storing transaction data for analytics and compliance.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Event&lt;/strong&gt;: &quot;TransactionCompleted&quot;&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Action&lt;/strong&gt;: Store transaction details in Amazon Redshift data warehouse.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Implementation&lt;/strong&gt;: AWS Lambda function subscribed to the &quot;TransactionCompleted&quot; event. Upon receipt, Lambda inserts data into Redshift using AWS Glue or AWS Data Pipeline.&lt;/li&gt;&lt;/ul&gt;&lt;h4 style=&quot;font-size: 18px;&quot;&gt;3. Data Analytics Feed&lt;/h4&gt;&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Example&lt;/strong&gt;: Providing real-time data feed to analytics tools for fraud detection.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Event&lt;/strong&gt;: &quot;TransactionInitiated&quot;&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Action&lt;/strong&gt;: Stream transaction data to Amazon Kinesis Data Streams for real-time processing.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Implementation&lt;/strong&gt;: ATMs publish &quot;TransactionInitiated&quot; events to Kinesis Data Streams. Analytics applications consume these events for fraud detection and analysis.&lt;/li&gt;&lt;/ul&gt;&lt;h4 style=&quot;font-size: 18px;&quot;&gt;4. Kafka Use Case&lt;/h4&gt;&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Example&lt;/strong&gt;: Implementing a Kafka pipeline for event streaming between ATMs and the core banking system.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Events&lt;/strong&gt;: Various events such as &quot;CashRefillRequested&quot;, &quot;PinValidationFailed&quot;, &quot;WithdrawalCompleted&quot;, etc.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Action&lt;/strong&gt;: Streaming events from ATMs to Kafka topics for real-time processing by backend systems.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Implementation&lt;/strong&gt;: ATMs produce events to Kafka topics using Kafka Producer API. Core banking systems consume these events using Kafka Consumer API for processing.&lt;/li&gt;&lt;/ul&gt;&lt;h3 style=&quot;font-size: 18px;&quot;&gt;Events Generated at ATM Sent to Core Banking&lt;/h3&gt;&lt;ol style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;TransactionInitiated&lt;/strong&gt;: When a customer initiates a transaction at the ATM.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;CashRefillRequested&lt;/strong&gt;: When cash refill is required due to low cash levels.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;TamperingDetected&lt;/strong&gt;: When tampering or unauthorized access is detected.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;PinValidationFailed&lt;/strong&gt;: When a customer enters an incorrect PIN during transaction initiation.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;WithdrawalCompleted&lt;/strong&gt;: When a cash withdrawal transaction is successfully completed.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;BalanceInquiryCompleted&lt;/strong&gt;: When a balance inquiry transaction is successfully completed.&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;TransferInitiated&lt;/strong&gt;: When a customer initiates a fund transfer transaction.&lt;/li&gt;&lt;/ol&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="10" y="-780" width="560" height="930" as="geometry" />
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-1" value="Monitoring &amp; Alerts" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="2702" y="816" width="583" height="286" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-2" value="CloudWatch" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="2753" y="897" width="100" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-3" value="CloudTrail" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="2759" y="988" width="87" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-4" value="SNS" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="2953" y="942" width="42" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-5" value="Reports &amp; Notifications" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="3045" y="851" width="216" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-6" value="Storage" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="2413" y="1122" width="490" height="334" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-7" value="S3 - Live Streams" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="2476" y="1328" width="139" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-8" value="Archive Policy" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="2727" y="1270" width="151" height="151" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-9" value="Redshift S3 Data Warehouse" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="2438" y="1161" width="214" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-10" value="DynamoDB - Analytics Data" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="2441" y="1245" width="208" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-11" value="Processing &amp; Analysis" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1777" y="1121" width="586" height="264" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-12" value="Apache Kafka" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1802" y="1245" width="114" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-13" value="Facial Recognition" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1966" y="1245" width="146" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-14" value="Process &amp; Analyze" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="2161" y="1173" width="177" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-15" value="Ingestion" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="1118" width="667" height="288" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-16" value="Kinesis Video Streams" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1085" y="1245" width="171" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-17" value="Preprocess &amp; Transform" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1306" y="1153" width="218" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-18" value="Kinesis Firehose" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1573" y="1245" width="129" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-19" value="CCTV Cameras" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="840" y="1210" width="170" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-20" value="CCTV Cameras" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="865" y="1245" width="120" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-21" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.9979813257853191;exitY=0.48666830623851104;entryX=-0.0014166134839866593;entryY=0.48666830623851104;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-20" target="pbEb2qhHtGVSDF14kwSl-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-22" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.998399924116525;exitY=0.48666830623851104;entryX=-0.0012551053948358659;entryY=0.49792074500967604;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-16" target="pbEb2qhHtGVSDF14kwSl-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-23" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.003146563389504603;entryY=0.48666830623851104;rounded=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-17" target="pbEb2qhHtGVSDF14kwSl-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-24" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.9995726947636567;exitY=0.48666830623851104;entryX=-0.00048352960954632673;entryY=0.48666830623851104;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-18" target="pbEb2qhHtGVSDF14kwSl-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-25" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.9957464117752878;exitY=0.48666830623851104;entryX=-0.0033212949151862157;entryY=0.48666830623851104;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-12" target="pbEb2qhHtGVSDF14kwSl-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-26" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.9946979888497967;exitY=0.48666830623851104;entryX=0.0012763071868379238;entryY=0.5002639684299964;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-13" target="pbEb2qhHtGVSDF14kwSl-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-27" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1.0008342333432645;exitY=0.869170762224858;entryX=-0.0009893513411926708;entryY=0.5087271297679228;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-14" target="pbEb2qhHtGVSDF14kwSl-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2363" y="1345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-28" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1.0008342333432645;exitY=0.1313571746351349;entryX=0.0006899967371860398;entryY=0.4940212474149816;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-14" target="pbEb2qhHtGVSDF14kwSl-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2363" y="1178" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-29" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1.0008342333432645;exitY=0.5002639684299964;entryX=0.0016677563007061298;entryY=0.48666830623851104;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-14" target="pbEb2qhHtGVSDF14kwSl-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-30" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.9977172741787039;exitY=0.5087271297679228;entryX=0.0026325958454056293;entryY=0.49865379080867134;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-7" target="pbEb2qhHtGVSDF14kwSl-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-31" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1.001857579311478;exitY=0.017088810406147893;entryX=0.42947209228090516;entryY=0.9787442824419808;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-9" target="pbEb2qhHtGVSDF14kwSl-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2677" y="1158" />
+              <mxPoint x="2702" y="1158" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-32" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.6647048465756024;exitY=0.9903447768267464;entryX=0.42222341041848716;entryY=0.9803504943847656;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-9" target="pbEb2qhHtGVSDF14kwSl-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2677" y="1242" />
+              <mxPoint x="2702" y="1242" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-33" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.7079470672466007;exitY=-0.009655223173253676;entryX=0.4416210478209678;entryY=0.9787442824419808;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-10" target="pbEb2qhHtGVSDF14kwSl-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2677" y="1210" />
+              <mxPoint x="2702" y="1210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-34" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.8376013639286095;exitY=0.9829918356502757;entryX=0.43698183367079463;entryY=0.9803504943847656;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-10" target="pbEb2qhHtGVSDF14kwSl-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2677" y="1293" />
+              <mxPoint x="2702" y="1293" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-35" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.9973337936401367;exitY=0.482420753030216;entryX=0.10037108291990512;entryY=0.0016062119427849265;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-2" target="pbEb2qhHtGVSDF14kwSl-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2928" y="913" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-36" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1.0058701613853718;exitY=0.4840269649730009;entryX=0.10037108291990512;entryY=0.9942532707663143;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-3" target="pbEb2qhHtGVSDF14kwSl-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2928" y="1004" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-37" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1.000719252086821;exitY=0.49792974135454965;entryX=0.00013985457243742767;entryY=0.4996741259539569;rounded=0;" edge="1" parent="1" source="pbEb2qhHtGVSDF14kwSl-4" target="pbEb2qhHtGVSDF14kwSl-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pbEb2qhHtGVSDF14kwSl-38" value="&lt;h3 style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;83:1-83:24&quot;&gt;Implementation Steps&lt;/h3&gt;&lt;ol style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;85:1-94:0&quot;&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;85:1-85:96&quot;&gt;Configure Kinesis Video Streams and Kinesis Firehose to ingest and pre-process video streams.&lt;/li&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;86:1-86:55&quot;&gt;Set up Apache Kafka for real-time stream processing.&lt;/li&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;87:1-87:67&quot;&gt;Integrate facial recognition software within the Kafka pipeline.&lt;/li&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;88:1-88:84&quot;&gt;Configure S3 buckets for storing live streams, archived data, and analytics data.&lt;/li&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;89:1-89:87&quot;&gt;Choose a data warehouse (Redshift) or data lake (S3) based on your analytical needs.&lt;/li&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;90:1-90:61&quot;&gt;Create a DynamoDB table to store processed analytics data.&lt;/li&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;91:1-91:72&quot;&gt;Configure CloudWatch for monitoring and CloudTrail for audit logging.&lt;/li&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;92:1-92:79&quot;&gt;Set up SNS for publishing notifications and alerts based on security events.&lt;/li&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;93:1-94:0&quot;&gt;(Optional) Use Amazon QuickSight to generate reports and visualizations.&lt;/li&gt;&#xa;&lt;/ol&gt;&lt;h3 style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;95:1-95:18&quot;&gt;Considerations&lt;/h3&gt;&lt;ul style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;97:1-101:0&quot;&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;97:1-97:84&quot;&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Security:&lt;/strong&gt; Implement IAM roles and policies for secure access to AWS resources.&lt;/li&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;98:1-98:74&quot;&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Scalability:&lt;/strong&gt; Design the system to handle varying video stream loads.&lt;/li&gt;&#xa;&lt;li style=&quot;font-size: 16px;&quot; data-sourcepos=&quot;99:1-101:0&quot;&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Cost Optimization:&lt;/strong&gt; Utilize cost-effective storage options like S3 Glacier for archived data.&lt;/li&gt;&lt;/ul&gt;" style="text;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1068" y="1421" width="1152" height="504" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
