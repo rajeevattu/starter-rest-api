@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-05T06:37:04.497Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="aIO1yCMaTkUNHK-Df4wK" version="24.4.13" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-06-05T06:50:52.283Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="B44hLI6es1m5dx5pNzfE" version="24.4.13" type="github" pages="9">
   <diagram name="BANK Ref-Architecture" id="-D1157T1DTG9kwEiHS_4">
     <mxGraphModel dx="2391" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1525,7 +1525,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="H_tqI2jUgaYsUXERaQok-1" value="Monitoring &amp; Alerts" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry y="830" width="351" height="291" as="geometry" />
+          <mxGeometry y="830" width="351" height="380" as="geometry" />
         </mxCell>
         <mxCell id="H_tqI2jUgaYsUXERaQok-2" value="CloudWatch" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="56" y="870" width="100" height="34" as="geometry" />
@@ -1540,7 +1540,7 @@
           <mxGeometry x="79" y="1063" width="182" height="34" as="geometry" />
         </mxCell>
         <mxCell id="H_tqI2jUgaYsUXERaQok-6" value="Storage" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="371" y="736" width="780" height="193" as="geometry" />
+          <mxGeometry x="371" y="736" width="1079" height="193" as="geometry" />
         </mxCell>
         <mxCell id="H_tqI2jUgaYsUXERaQok-7" value="S3 - Live Streams" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="970" y="761" width="139" height="34" as="geometry" />
@@ -1704,6 +1704,9 @@
         <mxCell id="H_tqI2jUgaYsUXERaQok-42" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.rekognition;fillColor=#2E73B8;gradientColor=none;" vertex="1" parent="1">
           <mxGeometry x="630" y="514" width="76.5" height="93" as="geometry" />
         </mxCell>
+        <mxCell id="H_tqI2jUgaYsUXERaQok-57" value="Requests &amp;amp; Data/ External System&amp;nbsp;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;" edge="1" parent="1" source="H_tqI2jUgaYsUXERaQok-43" target="H_tqI2jUgaYsUXERaQok-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="H_tqI2jUgaYsUXERaQok-43" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
           <mxGeometry x="876" y="609" width="69" height="72" as="geometry" />
         </mxCell>
@@ -1734,6 +1737,15 @@
         </mxCell>
         <mxCell id="H_tqI2jUgaYsUXERaQok-51" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;" vertex="1" parent="1">
           <mxGeometry x="214" y="980" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="H_tqI2jUgaYsUXERaQok-54" value="Config Data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="H_tqI2jUgaYsUXERaQok-52" target="H_tqI2jUgaYsUXERaQok-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H_tqI2jUgaYsUXERaQok-52" value="Surveillance System&#xa;&#xa;&#xa;Administrators/ Security Personnel" style="whiteSpace=wrap;strokeWidth=2;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="510" y="1040" width="182" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="H_tqI2jUgaYsUXERaQok-55" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="782" width="78" height="78" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
