@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-17T17:46:17.261Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="K4pWGNgkBscx3S5xLwU5" version="24.5.4" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2024-06-17T17:47:05.321Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="Lh2fdY05ACZbC2xOBJRI" version="24.5.4" type="github" pages="8">
   <diagram name="ACME-ERD" id="TTA11Wf1DAsyZJN5kxXx">
     <mxGraphModel dx="1222" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -5802,6 +5802,251 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-1" value="Cardholder" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-2" value="Merchant" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="223" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-3" value="AcquirerBank" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="465" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-4" value="PaymentProcessor" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="692" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-5" value="IssuerBank" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="919" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-6" value="API Gateway" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1119" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-7" value="Lambda" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1326" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-8" value="RDS/Aurora" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1554" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-9" value="SQS" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1754" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-10" value="CloudWatch" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1954" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-11" value="Batch" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="2154" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-12" value="StepFunctions" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="2459" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-13" value="S3" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="2706" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-14" value="KMS" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="2906" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-15" value="Redshift" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="3106" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-16" value="Glue" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="3316" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-17" value="Athena" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="3516" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-18" value="QuickSight" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="3716" y="20" width="150" height="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-19" value="Initiate Transaction" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-1" target="wEQ-xVJie3A6kPhArx8V-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="127" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-20" value="Send Transaction Details" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-2" target="wEQ-xVJie3A6kPhArx8V-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="428" y="179" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-21" value="Submit Transaction" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-3" target="wEQ-xVJie3A6kPhArx8V-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="876" y="231" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-22" value="Process Transaction" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-6" target="wEQ-xVJie3A6kPhArx8V-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1306" y="283" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-23" value="Store Transaction Data" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-7" target="wEQ-xVJie3A6kPhArx8V-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1524" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-24" value="Queue Transaction for Clearing" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-7" target="wEQ-xVJie3A6kPhArx8V-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1624" y="387" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-25" value="Process Cleared Transactions" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-9" target="wEQ-xVJie3A6kPhArx8V-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1627" y="439" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-26" value="Validate with MasterCard/Visa" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-7" target="wEQ-xVJie3A6kPhArx8V-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1096" y="491" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-27" value="Request Authorization" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-4" target="wEQ-xVJie3A6kPhArx8V-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="889" y="543" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-28" value="Authorize Transaction" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-5" target="wEQ-xVJie3A6kPhArx8V-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="892" y="595" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-29" value="Confirm Authorization" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-4" target="wEQ-xVJie3A6kPhArx8V-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="665" y="647" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-30" value="Confirm Transaction" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-3" target="wEQ-xVJie3A6kPhArx8V-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="431" y="699" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-31" value="Log Transaction Processing" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-7" target="wEQ-xVJie3A6kPhArx8V-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1724" y="751" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-32" value="Initiate Settlement Jobs" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-7" target="wEQ-xVJie3A6kPhArx8V-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1824" y="852" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-33" value="Orchestrate Settlement Workflow" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-11" target="wEQ-xVJie3A6kPhArx8V-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2390" y="904" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-34" value="Retrieve Transaction Data" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-12" target="wEQ-xVJie3A6kPhArx8V-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2093" y="956" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-35" value="Store Settlement Reports" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-12" target="wEQ-xVJie3A6kPhArx8V-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2666" y="1008" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-36" value="Encrypt Data" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-12" target="wEQ-xVJie3A6kPhArx8V-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2766" y="1060" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-37" value="Transfer Funds" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-11" target="wEQ-xVJie3A6kPhArx8V-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1396" y="1112" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-38" value="Transfer Funds" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-11" target="wEQ-xVJie3A6kPhArx8V-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1623" y="1164" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-39" value="Prepare Data for Reconciliation" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-16" target="wEQ-xVJie3A6kPhArx8V-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2522" y="1265" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-40" value="Load Prepared Data" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-16" target="wEQ-xVJie3A6kPhArx8V-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3298" y="1317" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-41" value="Query Reconciliation Data" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-17" target="wEQ-xVJie3A6kPhArx8V-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3398" y="1369" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-42" value="Generate Reconciliation Reports" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-18" target="wEQ-xVJie3A6kPhArx8V-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3498" y="1421" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-43" value="Display Reports" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-18" target="wEQ-xVJie3A6kPhArx8V-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2177" y="1473" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-44" value="Display Reports" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;fontSize=16;" edge="1" parent="1" source="wEQ-xVJie3A6kPhArx8V-18" target="wEQ-xVJie3A6kPhArx8V-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2404" y="1525" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-45" value="Clearing Process Complete" style="fillColor=#ffff88;strokeColor=#9E916F;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1169" y="771" width="257" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-46" value="Settlement Process Complete" style="fillColor=#ffff88;strokeColor=#9E916F;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="2204" y="1184" width="355" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="wEQ-xVJie3A6kPhArx8V-47" value="Reconciliation Process Complete" style="fillColor=#ffff88;strokeColor=#9E916F;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="3366" y="1545" width="450" height="49" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
